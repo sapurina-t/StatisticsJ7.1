@@ -10,7 +10,7 @@ public class StatsService {
         return total;
     }
 
-    public int AvSum(int[] sales) {
+    public int avSum(int[] sales) {
         int total = getSum(sales);
         int HowManyMonths = 0;
         for (int sale : sales) {
@@ -45,7 +45,7 @@ public class StatsService {
     }
 
     public int belowAvSales(int[] sales) {
-        int arithmeticalMean = AvSum(sales);
+        int arithmeticalMean = avSum(sales);
         int HowManyMonthsMin = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < arithmeticalMean) {
@@ -56,7 +56,7 @@ public class StatsService {
     }
 
     public int aboveAvSales(int[] sales) {
-        int arithmeticalMean = AvSum(sales);
+        int arithmeticalMean = avSum(sales);
         int HowManyMonthsMax = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > arithmeticalMean) {

@@ -1,14 +1,15 @@
 package ru.netology.stats.StatisticsJ7.services;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
-public class StatisticsJ7Test {
+
+public class StatsServiceTest {
 
     int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
     @Test
-    public void SalesAmount() {
+    public void salesAmount() {
         StatsService service = new StatsService();
 
         int expectedSum = 180;
@@ -18,11 +19,11 @@ public class StatisticsJ7Test {
     }
 
     @Test
-    public void AverageSalesAmount() {
+    public void averageSalesAmount() {
         StatsService service = new StatsService();
 
         int expectedASum = 15;
-        int actualASum = service.AvSum(sales);
+        int actualASum = service.avSum(sales);
 
         Assertions.assertEquals(expectedASum, actualASum);
     }
